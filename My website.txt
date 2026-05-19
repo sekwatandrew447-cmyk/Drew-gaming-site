@@ -1,0 +1,186 @@
+export default function GamingPortfolio() {
+  return (
+    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center text-center px-6 bg-black">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop')",
+          }}
+        ></div>
+
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.4),transparent_60%)]"></div>
+
+        <div className="relative z-10 max-w-3xl">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide mb-6 text-cyan-400 drop-shadow-lg">
+            ANDREW GAMING
+          </h1>
+
+          <p className="text-lg md:text-2xl text-gray-300 mb-8">
+            Gamer • Content Creator • Future Esports Legend
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="#games"
+              className="px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold shadow-lg"
+            >
+              My Games
+            </a>
+
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-2xl border border-cyan-400 hover:bg-cyan-500/20 transition font-semibold"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-6 text-cyan-400">
+              About Me
+            </h2>
+
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Hi! I’m Andrew, a passionate gamer and content creator. I enjoy
+              competitive gaming, streaming, and creating fun gaming content.
+              This website is my online space where I share my favorite games,
+              highlights, and gaming journey.
+            </p>
+          </div>
+
+          <div className="bg-gray-900 border border-cyan-500/30 rounded-3xl p-8 shadow-2xl">
+            <h3 className="text-2xl font-semibold mb-4 text-cyan-300">
+              Gaming Setup
+            </h3>
+
+            <ul className="space-y-3 text-gray-300">
+              <li>🎮 PC Gamer</li>
+              <li>🎧 RGB Headset</li>
+              <li>⚡ High FPS Competitive Setup</li>
+              <li>📹 Streaming & Recording</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Games Section */}
+      <section id="games" className="py-24 px-6 bg-gray-950">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-14 text-cyan-400">
+            Favorite Games
+          </h2>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Fortnite",
+              "Call of Duty",
+              "Minecraft",
+              "EA Sports FC",
+              "PUBG",
+              "Valorant",
+            ].map((game) => (
+              <div
+                key={game}
+                className="bg-black border border-cyan-500/20 rounded-3xl p-8 hover:scale-105 transition transform shadow-xl"
+              >
+                <div className="h-40 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 mb-6"></div>
+
+                <h3 className="text-2xl font-bold mb-3 text-cyan-300">
+                  {game}
+                </h3>
+
+                <p className="text-gray-400">
+                  Competitive gameplay, highlights, and exciting content.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-12 text-cyan-400">
+          Latest Content
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[1, 2, 3].map((item) => (
+            <div
+              key={item}
+              className="bg-gray-900 rounded-3xl overflow-hidden border border-cyan-500/20 shadow-lg"
+            >
+              <div className="h-52 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
+
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-semibold mb-2 text-cyan-300">
+                  Gaming Video #{item}
+                </h3>
+
+                <p className="text-gray-400 mb-4">
+                  Watch gameplay highlights, funny moments, and competitive
+                  matches.
+                </p>
+
+                <button className="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-medium">
+                  Watch Now
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="py-24 px-6 bg-gradient-to-b from-black to-gray-950 text-center"
+      >
+        <h2 className="text-4xl font-bold mb-6 text-cyan-400">
+          Connect With Me
+        </h2>
+
+        <p className="text-gray-400 mb-10 text-lg">
+          Follow my gaming journey and latest content.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <a
+            href="https://youtube.com"
+            className="px-6 py-3 rounded-2xl bg-red-600 hover:scale-105 transition"
+          >
+            YouTube
+          </a>
+
+          <a
+            href="https://twitch.tv"
+            className="px-6 py-3 rounded-2xl bg-purple-600 hover:scale-105 transition"
+          >
+            Twitch
+          </a>
+
+          <a
+            href="https://discord.com"
+            className="px-6 py-3 rounded-2xl bg-indigo-600 hover:scale-105 transition"
+          >
+            Discord
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 text-center border-t border-cyan-500/10 text-gray-500">
+        © 2026 Andrew Gaming. All rights reserved.
+      </footer>
+    </div>
+  );
+}
